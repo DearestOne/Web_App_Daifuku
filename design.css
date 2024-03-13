@@ -16,5 +16,38 @@ table{
     background-color: #ff5999;
 }
 th,td{
-    border:1px solid black
+    border:1px solid  #ff5999;
 }
+
+.collaps{
+    width: 100%;
+    font-size: 3.5ch;
+    border: none;
+    background-color: #ff5999;
+    margin-top: 5%;
+    text-align: left;
+}
+.active, .collaps:hover {
+    background-color: #ffe2ea;
+
+}
+
+.collaps:after {
+    content: '\25BC';
+    color: black;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\25B2";
+    color: white;
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    
+  }
