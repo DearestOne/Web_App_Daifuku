@@ -18,14 +18,50 @@
             </td>
         </tr>
         <tr>
-            <td style="font-size: 3.5ch;"> <p>RedBean</p> </td>
-        </tr>
-        <tr style="font-size: 3.5ch;">
-            <td style="width: 10ch;" align="center">S</td>
-            <td style="width: 1ch;"><input type="number" style="font-size:1.5ch; width: 5ch;height: 5ch;"></td>
-            <td style="width: 7ch;">30-.</td>
-        </tr>
+            <td>
+                <button type="button" class="collaps"> RedBean </button>
+                <div class="content">
+                    <p style="font-size: 3.5ch; text-align: center;" >  
+                        S 
+                        <input type="number" style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 17%; margin-right: 15%;">  
+                        30-.
+                    </p>
+                    <p style="font-size: 3.5ch; text-align: center;" >  
+                        M 
+                        <input type="number" style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 15%; margin-right: 15%;">  
+                        40-.
+                    </p>
+                    <p style="font-size: 3.5ch; text-align: center;" >  
+                        L 
+                        <input type="number" style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 17%; margin-right: 15%;">  
+                        50-.
+                    </p>
+                    <p style="font-size: 3.5ch; text-align: center;" >  
+                        XL 
+                        <input type="number" style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 13%; margin-right: 15%;">  
+                        55-.
+                    </p>
+                </div>
+            </td>
+        </tr>   
     </table>
 
+<script>
+    var coll = document.getElementsByClassName("collaps");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+    </script>
+    
 </body>
 </html>
