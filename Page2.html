@@ -1,67 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>orderdaifuku</title>
     <link rel="stylesheet" href="design.css">
 </head>
+
 <body style="background-image: url(/daismall.png);
         background-attachment: fixed;
         background-repeat: repeat-x;
         background-size: 30ch 20ch;">
-    <img src="/GalaxyDai.PNG" class = "center" width="650">
+    <img src="/GalaxyDai.PNG" class="center" width="650">
     <table>
         <tr>
-            <td colspan = 3 style="font-size: 5ch; background-color: white;" align="center"  >
+            <td colspan=3 style="font-size: 5ch; background-color: white;" align="center">
                 Daifuku
             </td>
         </tr>
         <tr>
             <td>
                 <button type="button" class="collaps"> RedBean </button>
-                <div class="content">
-                    <p style="font-size: 3.5ch; text-align: center;" >  
-                        S 
-                        <input type="number" style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 17%; margin-right: 15%;">  
+                <div class="content" id="content">
+                    <p style="font-size: 3.5ch; text-align: center;">
+                        S
+                        <input type="number"
+                            style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 17%; margin-right: 15%;">
                         30-.
                     </p>
-                    <p style="font-size: 3.5ch; text-align: center;" >  
-                        M 
-                        <input type="number" style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 15%; margin-right: 15%;">  
+                    <p style="font-size: 3.5ch; text-align: center;">
+                        M
+                        <input type="number"
+                            style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 15%; margin-right: 15%;">
                         40-.
                     </p>
-                    <p style="font-size: 3.5ch; text-align: center;" >  
-                        L 
-                        <input type="number" style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 17%; margin-right: 15%;">  
+                    <p style="font-size: 3.5ch; text-align: center;">
+                        L
+                        <input type="number"
+                            style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 17%; margin-right: 15%;">
                         50-.
                     </p>
-                    <p style="font-size: 3.5ch; text-align: center;" >  
-                        XL 
-                        <input type="number" style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 13%; margin-right: 15%;">  
+                    <p style="font-size: 3.5ch; text-align: center;">
+                        XL
+                        <input type="number"
+                            style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 13%; margin-right: 15%;">
                         55-.
                     </p>
                 </div>
             </td>
-        </tr>   
+        </tr>
+        <tr>
+            <td>
+                <button type="button" class="collaps"> Matcha </button>
+                <div class="content" id="content">
+                    <p style="font-size: 3.5ch; text-align: center;">
+                        S
+                        <input type="number"
+                            style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 17%; margin-right: 15%;">
+                        30-.
+                    </p>
+                    <p style="font-size: 3.5ch; text-align: center;">
+                        M
+                        <input type="number"
+                            style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 15%; margin-right: 15%;">
+                        40-.
+                    </p>
+                    <p style="font-size: 3.5ch; text-align: center;">
+                        L
+                        <input type="number"
+                            style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 17%; margin-right: 15%;">
+                        50-.
+                    </p>
+                    <p style="font-size: 3.5ch; text-align: center;">
+                        XL
+                        <input type="number"
+                            style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 13%; margin-right: 15%;">
+                        55-.
+                    </p>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" class="collaps"> Chocolate </button>
+                <div class="content" id="content">
+                    <p style="font-size: 3.5ch; text-align: center;">
+                        S
+                        <input type="number"
+                            style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 17%; margin-right: 15%;">
+                        30-.
+                    </p>
+                    <p style="font-size: 3.5ch; text-align: center;">
+                        M
+                        <input type="number"
+                            style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 15%; margin-right: 15%;">
+                        40-.
+                    </p>
+                    <p style="font-size: 3.5ch; text-align: center;">
+                        L
+                        <input type="number"
+                            style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 17%; margin-right: 15%;">
+                        50-.
+                    </p>
+                    <p style="font-size: 3.5ch; text-align: center;">
+                        XL
+                        <input type="number"
+                            style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 13%; margin-right: 15%;">
+                        55-.
+                    </p>
+                </div>
+            </td>
+        </tr>
     </table>
 
-<script>
-    var coll = document.getElementsByClassName("collaps");
-    var i;
+
     
-    for (i = 0; i < coll.length; i++) {
-      coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.display === "block") {
-          content.style.display = "none";
-        } else {
-          content.style.display = "block";
-        }
-      });
-    }
-    </script>
-    
+    <script src="app.js"></script>
+
 </body>
+
 </html>
