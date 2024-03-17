@@ -49,5 +49,9 @@ th,td{
     padding: 0 18px;
     display: none;
     overflow: hidden;
-    
-  }
+}
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1;
+    width: 14px;
+    height: 60px;
+}
