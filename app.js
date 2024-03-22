@@ -20,3 +20,24 @@ for (let i = 0; i < coll.length; i++) {
         }
     });
 }
+
+var inputid = ["input1","input2","input3","input4","input5","input6","input7","input8","input9","input10","input11","input12"];
+var price = [30,40,50,55];
+var outputs = document.getElementsByClassName("output");
+for(let i=0;i<outputs.length;i++){
+    outputs[i].setAttribute('hidden','hidden');
+}
+var qty = document.getElementsByClassName("quantity");
+var prc = document.getElementsByClassName("price");
+function outputRealtime(index){
+    let input = document.getElementById(inputid[index]);
+    let result = input.value * price[index % 4];
+    if(input.value > 0){
+        outputs[index].removeAttribute('hidden');
+    }
+    else if(input.value == 0){
+        outputs[index].setAttribute('hidden','hidden');
+    }
+    prc[index].innerHTML = result;
+    qty[index].innerHTML = input.value;
+}
