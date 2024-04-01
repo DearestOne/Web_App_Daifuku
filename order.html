@@ -13,182 +13,187 @@
         background-repeat: repeat-x;
         background-size: 30ch 20ch;">
     <img src="/GalaxyDai.PNG" class="center" width="650">
-    <table style="float: left; margin-left: 20%;">
-        <tr>
-            <td colspan=3 style="font-size: 5ch; background-color: white;" align="center">
-                Daifuku
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <button type="button" class="collaps"> RedBean </button>
-                <div class="content" id="content">
-                    <p style="font-size: 3.5ch; text-align: center;">
-                        S
-                        <input type="number" value="0" min="0" max="10" id="input1" onchange="outputRealtime(0)"
-                            style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 17%; margin-right: 15%;">
-                        30-.
-                    </p>
-                    <p style="font-size: 3.5ch; text-align: center;">
-                        M
-                        <input type="number" value="0" min="0" max="10" id="input2" onchange="outputRealtime(1)"
-                            style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 15%; margin-right: 15%;">
-                        40-.
-                    </p>
-                    <p style="font-size: 3.5ch; text-align: center;">
-                        L
-                        <input type="number" value="0" min="0" max="10" id="input3" onchange="outputRealtime(2)"
-                            style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 17%; margin-right: 15%;">
-                        50-.
-                    </p>
-                    <p style="font-size: 3.5ch; text-align: center;">
-                        XL
-                        <input type="number" value="0" min="0" max="10" id="input4" onchange="outputRealtime(3)"
-                            style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 13%; margin-right: 15%;">
-                        55-.
-                    </p>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <button type="button" class="collaps"> Matcha </button>
-                <div class="content" id="content">
-                    <p style="font-size: 3.5ch; text-align: center;">
-                        S
-                        <input type="number" value="0" min="0" max="10" id="input5" onchange="outputRealtime(4)"
-                            style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 17%; margin-right: 15%;">
-                        30-.
-                    </p>
-                    <p style="font-size: 3.5ch; text-align: center;">
-                        M
-                        <input type="number" value="0" min="0" max="10" id="input6" onchange="outputRealtime(5)"
-                            style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 15%; margin-right: 15%;">
-                        40-.
-                    </p>
-                    <p style="font-size: 3.5ch; text-align: center;">
-                        L
-                        <input type="number" value="0" min="0" max="10" id="input7" onchange="outputRealtime(6)"
-                            style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 17%; margin-right: 15%;">
-                        50-.
-                    </p>
-                    <p style="font-size: 3.5ch; text-align: center;">
-                        XL
-                        <input type="number" value="0" min="0" max="10" id="input8" onchange="outputRealtime(7)"
-                            style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 13%; margin-right: 15%;">
-                        55-.
-                    </p>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <button type="button" class="collaps"> Chocolate </button>
-                <div class="content" id="content">
-                    <p style="font-size: 3.5ch; text-align: center;">
-                        S
-                        <input type="number" value="0" min="0" max="10"  id="input9" onchange="outputRealtime(8)"
-                            style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 17%; margin-right: 15%;">
-                        30-.
-                    </p>
-                    <p style="font-size: 3.5ch; text-align: center;">
-                        M
-                        <input type="number" value="0" min="0" max="10" id="input10" onchange="outputRealtime(9)"
-                            style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 15%; margin-right: 15%;">
-                        40-.
-                    </p>
-                    <p style="font-size: 3.5ch; text-align: center;">
-                        L
-                        <input type="number" value="0" min="0" max="10" id="input11" onchange="outputRealtime(10)"
-                            style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 17%; margin-right: 15%;">
-                        50-.
-                    </p>
-                    <p style="font-size: 3.5ch; text-align: center;">
-                        XL
-                        <input type="number" value="0" min="0" max="10"  id="input12" onchange="outputRealtime(11)"
-                            style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 13%; margin-right: 15%;">
-                        55-.
-                    </p>
-                </div>
-            </td>
-        </tr>
-    </table>
-    
-    <table style="float: right; margin-right: 20%;">
-        <tr>
-            <td colspan=3 style="font-size: 5ch; background-color: white;" align="center">
-                Total
-            </td>
-        </tr>
-        <tr id="nqp">
-            <td style="font-size: 5ch;">Name</td>
-            <td style="font-size: 5ch;text-align: center;">Qty.</td>
-            <td style="font-size: 5ch;text-align: center;">Price</td>
-        </tr>
-        <tr class="output">
-            <td>Daifuku Strawbery<ul><li>RedBean S</li></ul></td>
-            <td class="quantity"></td>
-            <td class="price"></td>
-        </tr>
-        <tr class="output">
-            <td>Daifuku Strawbery<ul><li>RedBean M</li></ul></td>
-            <td class="quantity"></td>
-            <td class="price"></td>
-        </tr>
-        <tr class="output">
-            <td>Daifuku Strawbery<ul><li>RedBean L</li></ul></td>
-            <td class="quantity"></td>
-            <td class="price"></td>
-        </tr>
-        <tr class="output">
-            <td>Daifuku Strawbery<ul><li>RedBean XL</li></ul></td>
-            <td class="quantity"></td>
-            <td class="price"></td>
-        </tr>
-        <tr class="output">
-            <td>Daifuku Strawbery<ul><li>Matcha S</li></ul></td>
-            <td class="quantity"></td>
-            <td class="price"></td>
-        </tr>
-        <tr class="output">
-            <td>Daifuku Strawbery<ul><li>Matcha M</li></ul></td>
-            <td class="quantity"></td>
-            <td class="price"></td>
-        </tr>
-        <tr class="output">
-            <td>Daifuku Strawbery<ul><li>Matcha L</li></ul></td>
-            <td class="quantity"></td>
-            <td class="price"></td>
-        </tr>
-        <tr class="output">
-            <td>Daifuku Strawbery<ul><li>Matcha XL</li></ul></td>
-            <td class="quantity"></td>
-            <td class="price"></td>
-        </tr>
-        <tr class="output">
-            <td>Daifuku Strawbery<ul><li>Chocolate S</li></ul></td>
-            <td class="quantity"></td>
-            <td class="price"></td>
-        </tr>
-        <tr class="output">
-            <td>Daifuku Strawbery<ul><li>Chocolate M</li></ul></td>
-            <td class="quantity"></td>
-            <td class="price"></td>
-        </tr>
-        <tr class="output">
-            <td>Daifuku Strawbery<ul><li>Chocolate L</li></ul></td>
-            <td class="quantity"></td>
-            <td class="price"></td>
-        </tr>
-        <tr class="output">
-            <td>Daifuku Strawbery<ul><li>Chocolate XL</li></ul></td>
-            <td class="quantity"></td>
-            <td class="price"></td>
-        </tr>
 
-    </table>
-
+    <form action="total.php" method="GET">
     
+        <table style="float: left; margin-left: 20%;">
+            <tr>
+                <td colspan=3 style="font-size: 5ch; background-color: white;" align="center">
+                    Daifuku
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" class="collaps"> RedBean </button>
+                    <div class="content" id="content">
+                        <p style="font-size: 3.5ch; text-align: center;">
+                            S
+                            <input type="number" value="0" min="0" max="10" id="input1" onchange="outputRealtime(0)"
+                                style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 17%; margin-right: 15%;" name="Daifuku[]">
+                            30-.
+                        </p>
+                        <p style="font-size: 3.5ch; text-align: center;">
+                            M
+                            <input type="number" value="0" min="0" max="10" id="input2" onchange="outputRealtime(1)"
+                                style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 15%; margin-right: 15%;" name="Daifuku[]">
+                            40-.
+                        </p>
+                        <p style="font-size: 3.5ch; text-align: center;">
+                            L
+                            <input type="number" value="0" min="0" max="10" id="input3" onchange="outputRealtime(2)"
+                                style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 17%; margin-right: 15%;" name="Daifuku[]">
+                            50-.
+                        </p>
+                        <p style="font-size: 3.5ch; text-align: center;">
+                            XL
+                            <input type="number" value="0" min="0" max="10" id="input4" onchange="outputRealtime(3)"
+                                style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 13%; margin-right: 15%;" name="Daifuku[]">
+                            55-.
+                        </p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" class="collaps"> Matcha </button>
+                    <div class="content" id="content">
+                        <p style="font-size: 3.5ch; text-align: center;">
+                            S
+                            <input type="number" value="0" min="0" max="10" id="input5" onchange="outputRealtime(4)"
+                                style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 17%; margin-right: 15%;" name="Daifuku[]">
+                            30-.
+                        </p>
+                        <p style="font-size: 3.5ch; text-align: center;">
+                            M
+                            <input type="number" value="0" min="0" max="10" id="input6" onchange="outputRealtime(5)"
+                                style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 15%; margin-right: 15%;" name="Daifuku[]">
+                            40-.
+                        </p>
+                        <p style="font-size: 3.5ch; text-align: center;">
+                            L
+                            <input type="number" value="0" min="0" max="10" id="input7" onchange="outputRealtime(6)"
+                                style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 17%; margin-right: 15%;" name="Daifuku[]">
+                            50-.
+                        </p>
+                        <p style="font-size: 3.5ch; text-align: center;">
+                            XL
+                            <input type="number" value="0" min="0" max="10" id="input8" onchange="outputRealtime(7)"
+                                style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 13%; margin-right: 15%;" name="Daifuku[]">
+                            55-.
+                        </p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" class="collaps"> Chocolate </button>
+                    <div class="content" id="content">
+                        <p style="font-size: 3.5ch; text-align: center;">
+                            S
+                            <input type="number" value="0" min="0" max="10"  id="input9" onchange="outputRealtime(8)"
+                                style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 17%; margin-right: 15%;" name="Daifuku[]">
+                            30-.
+                        </p>
+                        <p style="font-size: 3.5ch; text-align: center;">
+                            M
+                            <input type="number" value="0" min="0" max="10" id="input10" onchange="outputRealtime(9)"
+                                style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 15%; margin-right: 15%;" name="Daifuku[]">
+                            40-.
+                        </p>
+                        <p style="font-size: 3.5ch; text-align: center;">
+                            L
+                            <input type="number" value="0" min="0" max="10" id="input11" onchange="outputRealtime(10)"
+                                style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 17%; margin-right: 15%;" name="Daifuku[]">
+                            50-.
+                        </p>
+                        <p style="font-size: 3.5ch; text-align: center;">
+                            XL
+                            <input type="number" value="0" min="0" max="10"  id="input12" onchange="outputRealtime(11)"
+                                style="font-size:1.5ch; width: 5ch;height: 5ch; margin-left: 13%; margin-right: 15%;" name="Daifuku[]">
+                            55-.
+                        </p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    
+        <table style="float: right; margin-right: 20%;">
+            <tr>
+                <td colspan=3 style="font-size: 5ch; background-color: white;" align="center">
+                    Total
+                </td>
+            </tr>
+            <tr id="nqp">
+                <td style="font-size: 5ch;">Name</td>
+                <td style="font-size: 5ch;text-align: center;">Qty.</td>
+                <td style="font-size: 5ch;text-align: center;">Price</td>
+            </tr>
+            <tr class="output">
+                <td>Daifuku Strawbery<ul><li>RedBean S</li></ul></td>
+                <td class="quantity"></td>
+                <td class="price"></td>
+            </tr>
+            <tr class="output">
+                <td>Daifuku Strawbery<ul><li>RedBean M</li></ul></td>
+                <td class="quantity"></td>
+                <td class="price"></td>
+            </tr>
+            <tr class="output">
+                <td>Daifuku Strawbery<ul><li>RedBean L</li></ul></td>
+                <td class="quantity"></td>
+                <td class="price"></td>
+            </tr>
+            <tr class="output">
+                <td>Daifuku Strawbery<ul><li>RedBean XL</li></ul></td>
+                <td class="quantity"></td>
+                <td class="price"></td>
+            </tr>
+            <tr class="output">
+                <td>Daifuku Strawbery<ul><li>Matcha S</li></ul></td>
+                <td class="quantity"></td>
+                <td class="price"></td>
+            </tr>
+            <tr class="output">
+                <td>Daifuku Strawbery<ul><li>Matcha M</li></ul></td>
+                <td class="quantity"></td>
+                <td class="price"></td>
+            </tr>
+            <tr class="output">
+                <td>Daifuku Strawbery<ul><li>Matcha L</li></ul></td>
+                <td class="quantity"></td>
+                <td class="price"></td>
+            </tr>
+            <tr class="output">
+                <td>Daifuku Strawbery<ul><li>Matcha XL</li></ul></td>
+                <td class="quantity"></td>
+                <td class="price"></td>
+            </tr>
+            <tr class="output">
+                <td>Daifuku Strawbery<ul><li>Chocolate S</li></ul></td>
+                <td class="quantity"></td>
+                <td class="price"></td>
+            </tr>
+            <tr class="output">
+                <td>Daifuku Strawbery<ul><li>Chocolate M</li></ul></td>
+                <td class="quantity"></td>
+                <td class="price"></td>
+            </tr>
+            <tr class="output">
+                <td>Daifuku Strawbery<ul><li>Chocolate L</li></ul></td>
+                <td class="quantity"></td>
+                <td class="price"></td>
+            </tr>
+            <tr class="output">
+                <td>Daifuku Strawbery<ul><li>Chocolate XL</li></ul></td>
+                <td class="quantity"></td>
+                <td class="price"></td>
+            </tr>
+
+        </table>
+
+        <button type="submit" name="submit" value="submit"> Next </button>
+    </form>
+
     <script src="app.js"></script>
 
 </body>
