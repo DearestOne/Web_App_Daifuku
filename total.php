@@ -18,26 +18,45 @@
         }
     </style>
 </head>
-<body style="background-image: url(/daismall.png);
+<body style="background-image: url(daismall.png);
     background-attachment: fixed;
     background-repeat: repeat-x;
     background-size: 30ch 20ch;">
-    <img src="/GalaxyDai.PNG" class="center" width="650">
+    <img src="GalaxyDai.PNG" class="center" width="650">
 
     <?php
         if($_GET['submit']){
-            session_start();
-            $_SESSION['Daifuku'] = $_GET['Daifuku'];
-            $order = $_GET['Daifuku'];
             $Dname = array("Redbean","Matcha","Chocolate");
             $Sname = array("S","M","L","XL");
             $Dbase = array(30,40,50,55);
             $total_price = 0;
+
+            require('connection.php');
+            $sql_stock = "select stock from menu order by menu_id asc;";
+            $sql_selected = $conn->query($sql_stock);
+            $sql_selected_array = array();
+            foreach($sql_selected as $rows){
+                $sql_selected_array[] = $rows['stock'];
+            }
+
+            $pass = true;
+            session_start();
+            $_SESSION['Daifuku'] = $_GET['Daifuku'];
+            $order = $_GET['Daifuku'];
             for($i=0; $i<12; $i++){
                 if($order[$i] > 0){
-                    $base = $Dbase[$i%4];
-                    $size = $Sname[$i%4];
                     $name = $Dname[$i/4];
+                    $size = $Sname[$i%4];
+                    if($order[$i] > $sql_selected_array[$i]){
+                        $pass = false;
+                        if($sql_selected_array[$i] == 0){
+                            echo "Sorry, ".$name." ".$size." is out of stock.";
+                        }
+                        else{
+                            echo "Sorry, ".$name." ".$size." is not enough for your order. max ".$sql_selected_array[$i];
+                        }
+                    }
+                    $base = $Dbase[$i%4];
                     $total_price += ($order[$i]*$base);
                 }
             }
@@ -45,6 +64,14 @@
             if($total_price == 0){
                 echo "<script> alert('please order something'); </script>";
                 echo "<a href='order.html'><button class='go_back' style='margin-left: 46%; margin-right: 44%; display:block;'> go back </button></a>";
+                session_unset();
+                session_destroy();
+            }
+            else if($pass == false){
+                echo "<br>please try again.";
+                echo "<a href='order.html'><button class='go_back' style='margin-left: 46%; margin-right: 44%; display:block;'> go back </button></a>";
+                session_unset();
+                session_destroy();
             }
             else{
                 echo "<table align='center'>
