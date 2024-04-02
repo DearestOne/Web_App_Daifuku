@@ -7,8 +7,14 @@
     <title>Total</title>
     <style>
         table{
-            border: 0.75ch solid black;
+            border: 0.5ch solid black;
             width: 50%;
+            font-family: sans-serif;
+        }
+        hr.new1 {
+            width: 80%;
+            border-top: 5px solid black;
+            margin-block: 5%;
         }
     </style>
 </head>
@@ -38,7 +44,7 @@
             
             if($total_price == 0){
                 echo "<script> alert('please order something'); </script>";
-                echo "<a href='order.html'><button> go back </button></a>";
+                echo "<a href='order.html'><button class='go_back' style='margin-left: 46%; margin-right: 44%; display:block;'> go back </button></a>";
             }
             else{
                 echo "<table align='center'>
@@ -58,19 +64,21 @@
                         $size = $Sname[$i%4];
                         $name = $Dname[$i/4];
                         echo "<tr>";
-                        echo "<td>Daifuku Strawbery<ul><li>".$name." ".$size."</li></ul></td>";
-                        echo "<td>$order[$i]</td>";
-                        echo "<td>".($order[$i]*$base)."</td>";
+                        echo "<td style='font-size:3ch'>Daifuku Strawbery<ul><li>".$name." ".$size."</li></ul></td>";
+                        echo "<td style='font-size:3ch;text-align:center;'>$order[$i]</td>";
+                        echo "<td style='font-size:3ch;text-align:center;'>".($order[$i]*$base)."</td>";
                         echo "</tr>";
                     }
                 }
-                echo "<tr><td colspan=2 style='text-align:center;'>TOTAL</td><td>$total_price</td></tr></table>";
-                echo "<a href='firstpage.html'><button> cancel order </button></a>";
-                echo "<a href='reciept.php'><button> to pay </button></a>";
+                echo "<td colspan=3><hr class='new1'></td>";
+                echo "<tr><td colspan=2 style='text-align:center;font-size:3ch'>TOTAL</td><td style='font-size:3ch'>$total_price</td></tr>";
+                echo "<tr><td colspan=3><img src='/QrToPay.PNG' style='width: 40%; border: 2ch solid white; border-radius: 3ch; margin-left: auto; margin-right: auto; margin-top: 7ch; display: block;'></td></tr></table>";
+
+                echo "<a href='firstpage.html'><button class='cancel' style='float: left; margin-top:7ch'> CANCEL ORDER </button></a>";
+                echo "<a href='reciept.php'><button class='confirm' style='float: right; margin-top:7ch'> CONFIRM </button></a>";
             }
         }
     ?>
-    
     
     
 </body>
