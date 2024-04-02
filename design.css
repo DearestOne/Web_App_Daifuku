@@ -9,13 +9,17 @@ body{
 }
 
 table{
-    border: 0.75ch solid black;
+    border: 0.5ch solid black;
+    border-radius: 5%;
     padding: 2ch;
     width: 25%;
     background-color: #ff5999;
+    font-family: sans-serif;
 }
 th,td{
     border:1px solid  #ff5999;
+    border-radius: 5%;
+    font-family: sans-serif;
 }
 
 .collaps{
@@ -53,4 +57,48 @@ input[type=number]::-webkit-inner-spin-button {
     opacity: 1;
     width: 14px;
     height: 60px;
+}
+
+.cancel{
+    background-color: white;
+    font-size: 3ch;
+    border: 5px solid black;
+    border-radius: 15%;
+    padding: 12px 20px;
+    color: black;
+    font-family: sans-serif;
+}
+
+.confirm{
+    background-color: white;
+    font-size: 3ch;
+    border:5px solid #ff5999;
+    border-radius: 15%;
+    padding: 12px 20px;
+    color: #ff5999;
+    font-family: sans-serif;
+}
+
+.next{
+    margin-top: 5%;
+    margin-left: 46%;
+    margin-right: 44%;
+    background-color: white;
+    font-size: 3ch;
+    border:5px solid #ff5999;
+    border-radius: 15%;
+    padding: 12px 20px;
+    color: #ff5999;
+    font-family: sans-serif;
+}
+
+.go_back{
+    
+    background-color: white;
+    font-size: 3ch;
+    border:5px solid black;
+    border-radius: 15%;
+    padding: 12px 20px;
+    color: black;
+    font-family: sans-serif;
 }
