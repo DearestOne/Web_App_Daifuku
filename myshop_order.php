@@ -4,7 +4,7 @@
     if(isset($_POST['submit'])){
         $order_finish = $_POST['serve'];
         foreach($order_finish as $rows){
-            $u_order = "update orders set served = 1 where order_id = $rows";
+            $u_order = "update Orders set served = 1 where order_id = $rows";
             $conn->query($u_order);
         }
     }
@@ -44,11 +44,11 @@
             <td style="font-size: 5ch; text-align: center;">Already</td>
         </tr>
         <?php
-            $s_order_no_serve = "select order_id from orders where served = 0 group by order_id;";
+            $s_order_no_serve = "select order_id from Orders where served = 0 group by order_id;";
             $order_no_serve = $conn->query($s_order_no_serve);
             foreach($order_no_serve as $rows){
                 $current_forder = $rows['order_id'];
-                $s_count = "select count(order_id) as count from order_details where order_id = $current_forder";
+                $s_count = "select count(order_id) as count from Order_Details where order_id = $current_forder";
                 $count = $conn->query($s_count);
                 $count_detail = array();
                 foreach($count as $rows2){
@@ -56,8 +56,8 @@
                 }
                 echo "<tr><td rowspan=$count_detail[0] style='font-size: 3.5ch; text-align: center;background-color: white;'>".$current_forder."</td>";
                 $s_datail = "select order_id,m.menu_name,quantity,order_price
-                                from order_details od
-                                join menu m on m.menu_id = od.menu_id
+                                from Order_Details od
+                                join Menu m on m.menu_id = od.menu_id
                                 where order_id = $current_forder
                                 order by m.menu_id asc;";
                 $detail = $conn->query($s_datail);
