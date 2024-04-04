@@ -100,7 +100,7 @@
                 $_SESSION['total_price'] = $total_price;
                 echo "<td colspan=3><hr class='new1'></td>";
                 echo "<tr><td colspan=2 style='text-align:center;font-size:3ch'>TOTAL</td><td style='font-size:3ch'>$total_price</td></tr>";
-                echo "<tr><td colspan=3><img src='/QrToPay.PNG' style='width: 40%; border: 2ch solid white; border-radius: 3ch; margin-left: auto; margin-right: auto; margin-top: 7ch; display: block;'></td></tr></table>";
+                echo "<tr><td colspan=3><img src='QrToPay.PNG' style='width: 40%; border: 2ch solid white; border-radius: 3ch; margin-left: auto; margin-right: auto; margin-top: 7ch; display: block;'></td></tr></table>";
 
                 echo "<a href='firstPage.html'><button class='cancel' style='float: left; margin-top:7ch'> CANCEL ORDER </button></a>";
                 echo "<a href='reciept.php'><button class='confirm' style='float: right; margin-top:7ch'> CONFIRM </button></a>";
