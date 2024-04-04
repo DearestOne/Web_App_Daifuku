@@ -128,5 +128,6 @@
             </td>
         </tr>
     </table>
+    <a href="http://daifukugalaxy.great-site.net/ProjectDaifuku/EN/firstPage.html"><button class="go_back" align="center" style="margin-left: 47%;margin-top:2%;">HOME</button></a>
 </body>
 </html>
