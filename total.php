@@ -32,7 +32,7 @@
             $total_price = 0;
 
             require('connection.php');
-            $sql_stock = "select stock from menu order by menu_id asc;";
+            $sql_stock = "select stock from Menu order by menu_id asc;";
             $sql_selected = $conn->query($sql_stock);
             $sql_selected_array = array();
             foreach($sql_selected as $rows){
@@ -102,7 +102,7 @@
                 echo "<tr><td colspan=2 style='text-align:center;font-size:3ch'>TOTAL</td><td style='font-size:3ch'>$total_price</td></tr>";
                 echo "<tr><td colspan=3><img src='/QrToPay.PNG' style='width: 40%; border: 2ch solid white; border-radius: 3ch; margin-left: auto; margin-right: auto; margin-top: 7ch; display: block;'></td></tr></table>";
 
-                echo "<a href='firstpage.html'><button class='cancel' style='float: left; margin-top:7ch'> CANCEL ORDER </button></a>";
+                echo "<a href='firstPage.html'><button class='cancel' style='float: left; margin-top:7ch'> CANCEL ORDER </button></a>";
                 echo "<a href='reciept.php'><button class='confirm' style='float: right; margin-top:7ch'> CONFIRM </button></a>";
             }
         }
