@@ -4,9 +4,9 @@
     $total = $_SESSION['total_price'];
     require('connection.php');
 
-    $c_order = "insert into orders(sum_price) value ($total);";
+    $c_order = "insert into Orders(sum_price) value ($total);";
     $conn->query($c_order);
-    $s_order = "select order_id from orders order by order_id desc limit 1";
+    $s_order = "select order_id from Orders order by order_id desc limit 1";
     $curr_order = $conn->query($s_order);
     $current_order = array();
     foreach($curr_order as $row){
@@ -14,12 +14,12 @@
     }
     for($i=0;$i<12;$i++){
         if($order[$i] > 0){
-            $c_order_detail = "insert into order_details(order_id,menu_id,quantity,order_price)
+            $c_order_detail = "insert into Order_Details(order_id,menu_id,quantity,order_price)
                                 value ($current_order[0],
                                 $i,
                                 $order[$i],
-                                $order[$i]*(select price from straw_flour where sf_id = $i%4));";
-            $c_del_ingre = "update menu
+                                $order[$i]*(select price from Straw_Flour where sf_id = $i%4));";
+            $c_del_ingre = "update Menu
                             set stock = stock - $order[$i]
                             where menu_id = $i;";
             $conn->query($c_order_detail);
@@ -70,7 +70,7 @@
         <tr>
             <td colspan="2" style="font-size: 3ch;">Date/Time:</td>
             <?php
-                $s_datetime = "select order_date from orders where order_id = $current_order[0];";
+                $s_datetime = "select order_date from Orders where order_id = $current_order[0];";
                 $datetime = $conn->query($s_datetime);
                 $datetime_array = array();
                 foreach($datetime as $rows){
@@ -91,8 +91,8 @@
         </tr>
         <?php
             $s_all = "select order_id,m.menu_name,quantity,order_price
-                        from order_details od
-                        join menu m on m.menu_id = od.menu_id
+                        from Order_Details od
+                        join Menu m on m.menu_id = od.menu_id
                         where order_id = $current_order[0]
                         order by m.menu_id asc;";
             $result = $conn->query($s_all);
